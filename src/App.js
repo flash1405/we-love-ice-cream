@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "./redux/actions";
+import Login from "./components/Login";
+import IceCreamPreferences from "./components/IceCreamPreferences";
 
-function App() {
+const App = () => {
+  const currentUser = useSelector((state) => state.currentUser);
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(logout());
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Ice Cream Preferences App</h1>
+      {currentUser ? (
+        <div>
+          <button onClick={handleLogout}>Logout</button>
+          <IceCreamPreferences />
+        </div>
+      ) : (
+        <Login />
+      )}
     </div>
   );
-}
+};
 
 export default App;

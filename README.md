@@ -4,12 +4,12 @@ A simple web application using React and Redux that allows users to log in, view
 
 ## Getting Started - Running the App Locally
 
-Run - git clone https://github.com/flash1405/we-love-ice-cream.git
-In this new directory, run - npm install
-This will install all the dependencies required.
-If you do not have npm installed, please follow the instructions here - https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
-Run - npm start
-The app should now be running on http://localhost:3000/. Test it out!
+* Run - git clone https://github.com/flash1405/we-love-ice-cream.git
+* In this new directory, run - npm install
+* This will install all the dependencies required.
+* If you do not have npm installed, please follow the instructions here - https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+* Run - npm start
+* The app should now be running on http://localhost:3000/. Test it out!
 
 ## Available Scripts
 
